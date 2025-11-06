@@ -1,0 +1,31 @@
+# PROJECT PACKLIST — Nebras RAG
+الرجاء حفظ/رفع الملفات التالية عند مشاركة المشروع مستقبلًا:
+
+[أ] سكربتات أساسية (Backend & Ingestion)
+- setup_database.py
+- setup_chat_schema.py
+- ingest_books.py
+- list_and_view_conversations.py    (اختياري)
+- search_and_ask.py                 (إن وُجد)
+- search_and_ask_with_memory.py     (إن وُجد)
+
+[ب] واجهة المستخدم
+- chat_ui.py
+
+[ج] بيانات الإدخال
+- مجلد books/ ويحتوي ملفات .txt (ترميز UTF-8)
+
+[د] وثائق
+- README_NEBRAS_RAG_ROADMAP.md
+- PROJECT_PACKLIST_NEBRAS_RAG.txt
+
+[هـ] إعدادات (في الكود مباشرة أو في .env لاحقًا)
+- DB: host, port, user, password, dbname
+- LM Studio: BASE_URL (افتراضي http://127.0.0.1:1234/v1), أسماء النماذج:
+  - Chat Model: Qwen2.5-7B-Instruct-1M-GGUF
+  - Embedding Model: text-embedding-intfloat-multilingual-e5-large-instruct
+
+ملاحظات:
+- تأكد من وجود عمود size في جدول book (انظر README).
+- يُفضل تشغيل ingest_books.py بعد وضع الكتب في ./books/.
+- شغّل Streamlit عبر: streamlit run chat_ui.py
